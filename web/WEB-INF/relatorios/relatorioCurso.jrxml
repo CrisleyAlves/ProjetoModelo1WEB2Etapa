@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.2.2.final using JasperReports Library version 6.2.2  -->
+<!-- 2017-06-06T22:10:56 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="relatorioCurso" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a765fbcc-dfe2-4f39-a030-9c8084d43faa">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="relatorioCurso"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="inicioAtividades" class="java.util.Calendar">
+		<fieldDescription><![CDATA[inicioAtividades]]></fieldDescription>
+	</field>
+	<field name="sigla" class="java.lang.String">
+		<fieldDescription><![CDATA[sigla]]></fieldDescription>
+	</field>
+	<field name="nome" class="java.lang.String">
+		<fieldDescription><![CDATA[nome]]></fieldDescription>
+	</field>
+	<field name="id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[id]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="79" backcolor="#6373CF" uuid="576b9bf0-f455-4c91-ae88-be8779f2e38e"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="-1" width="555" height="79" backcolor="#7A8CC2" uuid="145053c6-9c05-4c7e-b62e-4ac9028ffcc7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="22"/>
+				</textElement>
+				<text><![CDATA[RELATÓRIO DE CURSOS]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="7" y="20" width="100" height="30" uuid="824ad388-bf5b-447c-8609-5109203e5d50"/>
+				<text><![CDATA[id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="120" y="20" width="100" height="30" uuid="17c5c173-ef70-4fd5-a9ed-70b6ba9249f2"/>
+				<text><![CDATA[nome]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="230" y="20" width="100" height="30" uuid="6dd46c63-8c33-4cc3-b582-3711df4c10a8"/>
+				<text><![CDATA[sigla]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="340" y="20" width="100" height="30" uuid="22354784-8031-4db1-a685-406b044f2925"/>
+				<text><![CDATA[inicioAtividades]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="50" splitType="Stretch">
+			<textField>
+				<reportElement x="7" y="10" width="100" height="30" uuid="09b1bb5d-200b-4681-ba25-a39c62ae3b9b"/>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="10" width="100" height="30" uuid="f685ef30-76e9-4f9a-94a2-17450c63a953"/>
+				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="230" y="10" width="100" height="30" uuid="1111acdd-b77f-438a-91c7-a9bbcc3b4f31"/>
+				<textFieldExpression><![CDATA[$F{sigla}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="340" y="10" width="100" height="30" uuid="191532ff-954f-4638-87a0-500c35bde400"/>
+				<textFieldExpression><![CDATA[$F{inicioAtividades}.getTime()]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
