@@ -76,7 +76,7 @@
                     </p:column>
 
                     <p:column headerText="Status">
-                        <p:outputLabel value="#{obj.ativo}"/>
+                        <p:outputLabel value="#{obj.ativo ? 'Sim' : 'Não'}"/>
                     </p:column>
 
                     <p:column headerText="Inicio">
@@ -105,7 +105,7 @@
         </ui:define>
         <ui:define name="dialogos">
             <p:dialog widgetVar="dlg" header="Edição" modal="true" resizable="false"
-                      position="center,top" width="450" height="480">
+                      position="center,top" width="600" height="480">
                 <h:form id="formEdicao">
                     <p:growl id="growl"/>
 
@@ -137,9 +137,10 @@
                                      maxlength="40" placeholder="obrigatório"/>
                         
                         <p:outputLabel value="DESCRIÇÃO" for="txtDescricao"/>
-                        <p:inputText value="#{controleCurso.objeto.descricao}" 
-                                     size="40" id="txtDescricao"
-                                     maxlength="40" placeholder="obrigatório"/>
+                        <p:editor value="#{controleCurso.objeto.descricao}" width="300"
+                                      height="180"
+                                      id="txtDescricao"
+                                      />
                         
                         <p:outputLabel for="Ativo" value="Ativo" />
                         <p:selectBooleanCheckbox value="#{controleCurso.objeto.ativo}"
