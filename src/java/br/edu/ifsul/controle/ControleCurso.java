@@ -66,7 +66,9 @@ public class ControleCurso implements Serializable{
     }
     
     public void alterarDisciplina(int index){
+        System.out.println("Estou aqui"+ index);
         disciplina = objeto.getListaDisciplinas().get(index);
+        objeto.removerDisciplina(index);
         novoDado = false;
     }
     
